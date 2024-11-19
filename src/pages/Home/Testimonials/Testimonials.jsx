@@ -14,7 +14,7 @@ import { useEffect, useState } from "react";
 const Testimonials = () => {
     const [rivews, setRivews] = useState([]);
     useEffect(() => {
-        fetch('rivews.json')
+        fetch('http://localhost:5000/rivews')
             .then(res => res.json())
             .then(data => setRivews(data))
     }, [])
